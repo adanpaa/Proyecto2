@@ -42,7 +42,7 @@
   <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo"><a href="index.html">Sailor</a></h1>
+      <h1 class="logo"><a href="/inicio">Sailor</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -53,9 +53,9 @@
 
           <li class="drop-down"><a href="#">About</a>
             <ul>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="team.html">Team</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/equipo">Team</a></li>
+              <li><a href="/testimonios">Testimonials</a></li>
 
               <li class="drop-down"><a href="#">Deep Drop Down</a>
                 <ul>
@@ -69,17 +69,15 @@
             </ul>
           </li>
 
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/productos">Portfolio</a></li>
+          <li><a href="/contacto">Contact</a></li>
 
         </ul>
 
       </nav><!-- .nav-menu -->
 
-      <a href="index.html" class="get-started-btn ml-auto">Get Started</a>
+      <a href="/inicio" class="get-started-btn ml-auto">Get Started</a>
 
     </div>
   </header><!-- End Header -->
