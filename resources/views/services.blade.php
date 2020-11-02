@@ -8,10 +8,10 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Services</h2>
+          <h2>Servicios</h2>
           <ol>
-            <li><a href="/inicio">Home</a></li>
-            <li>Services</li>
+            <li><a href="/inicio">Inicio</a></li>
+            <li>Servicios</li>
           </ol>
         </div>
 
