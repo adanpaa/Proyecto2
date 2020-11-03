@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,9 +34,26 @@ Route::get('/equipo', function () {
     return view('equipo');
 });
 
-Route::get('/productos', function () {
-    return view('productos');
+
+Route::get('/productos', [ProductosController::class, 'index']);
+Route::get('/productos/create', [ProductosController::class, 'create']);
+Route::get('/productos/{id}', [ProductosController::class, 'show']);
+
+/* Route::post('/productos', function(Request $request) {
+    return redirect('productos');
 });
+
+Route::get('productos/{id}', function() {
+
+});
+
+Route::get('productos/{id}/edit', function() {
+
+});
+
+Route::post('productos/{id}', function(Request $request) {
+    return redirect('productos');
+}); */
 
 Route::get('/services', function () {
     return view('services');
