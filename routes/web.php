@@ -35,9 +35,15 @@ Route::get('/equipo', function () {
 });
 
 
-Route::get('/productos', [ProductosController::class, 'index']);
+/* Route::get('/productos', [ProductosController::class, 'index']);
 Route::get('/productos/create', [ProductosController::class, 'create']);
-Route::get('/productos/{id}', [ProductosController::class, 'show']);
+Route::post('/productos',  [ProductosController::class, 'store']);
+Route::get('/productos/{producto}', [ProductosController::class, 'show']);
+Route::get('/productos/{producto}/edit', [ProductosController::class, 'create']);
+Route::post('/productos/{producto}',  [ProductosController::class, 'update']);
+Route::post('/productos/{producto}/delete',  [ProductosController::class, 'destroy']); */
+
+Route::resource('producto', ProductosController::class);
 
 /* Route::post('/productos', function(Request $request) {
     return redirect('productos');

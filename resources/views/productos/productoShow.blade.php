@@ -23,9 +23,16 @@
   </div>
 </section><!-- End Breadcrumbs -->
 
-<p align=center>
-<a href="/productos/create">Añadir nuevo producto</a>
-</p>
+<ul align=center>
+<a href="{{ action([\App\Http\Controllers\ProductosController::class, 'create']) }}">Añadir nuevo producto</a><br>
+<a href="{{ route('producto.edit', [$producto->id]) }}">Editar Producto</a><br>
+<form action="{{ route('producto.destroy', [$producto]) }}" method="POST">
+  @method('DELETE')
+  @csrf
+
+  <button type="submit">Eliminar Producto</button>
+</form>
+</ul>
 
 <table align=center border='1'>
   <tr>

@@ -70,14 +70,14 @@
           </li>
 
           <li><a href="/inicio">Servicios</a></li>
-          <li><a href="/productos">Productos</a></li>
+          <li><a href="/producto">Productos</a></li>
           <li><a href="/contacto">Contacto</a></li>
 
         </ul>
 
       </nav><!-- .nav-menu -->
 
-      <a href="/productos" class="get-started-btn ml-auto">Empezar</a>
+      <a href="/producto" class="get-started-btn ml-auto">Empezar</a>
 
     </div>
   </header><!-- End Header -->

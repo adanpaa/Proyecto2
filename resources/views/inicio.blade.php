@@ -15,7 +15,7 @@
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">Bienvenido a <span>BlowShop</span></h2>
               <p class="animate__animated animate__fadeInUp">La mejor tienda para anunciar tus productos en todo Mexico</p>
-              <a href="/productos" class="btn-get-started animate__animated animate__fadeInUp scrollto">Ver Productos</a>
+              <a href="/producto" class="btn-get-started animate__animated animate__fadeInUp scrollto">Ver Productos</a>
             </div>
           </div>
         </div>
@@ -26,7 +26,7 @@
             <div class="container">
             <h2 class="animate__animated animate__fadeInDown">Bienvenido a <span>BlowShop</span></h2>
               <p class="animate__animated animate__fadeInUp">La mejor tienda para anunciar tus productos en todo Mexico</p>
-              <a href="/productos" class="btn-get-started animate__animated animate__fadeInUp scrollto">Ver Productos</a>
+              <a href="/producto" class="btn-get-started animate__animated animate__fadeInUp scrollto">Ver Productos</a>
             </div>
           </div>
         </div>
@@ -37,7 +37,7 @@
             <div class="container">
             <h2 class="animate__animated animate__fadeInDown">Bienvenido a <span>BlowShop</span></h2>
               <p class="animate__animated animate__fadeInUp">La mejor tienda para anunciar tus productos en todo Mexico</p>
-              <a href="/productos" class="btn-get-started animate__animated animate__fadeInUp scrollto">Ver Productos</a>
+              <a href="/producto" class="btn-get-started animate__animated animate__fadeInUp scrollto">Ver Productos</a>
             </div>
           </div>
         </div>

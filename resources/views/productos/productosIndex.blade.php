@@ -24,7 +24,7 @@
 </section><!-- End Breadcrumbs -->
 
 <p align=center>
-<a href="/productos/create">Añadir nuevo producto</a>
+<a href="/producto/create">Añadir nuevo producto</a>
 </p>
 
 <table align=center border='1'>
@@ -38,7 +38,7 @@
   @foreach ($productos as $p)
     <tr>
       <td>{{ $p->id }}</td>
-      <td><a href="/productos/{{ $p->id }}">{{ $p->nombre }}</a></td>
+      <td><a href="/producto/{{ $p->id }}">{{ $p->nombre }}</a></td>
       <td>{{ $p->precio }}</td>
       <td>{{ $p->descripcion }}</td>
       <td>{{ $p->enlace }}</td>

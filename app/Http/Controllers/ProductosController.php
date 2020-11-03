@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Producto;                           
-use Illuminate\Support\Facades\DB;
+use App\Models\Producto;
 use Illuminate\Http\Request;
 
 class ProductosController extends Controller
@@ -38,53 +37,89 @@ class ProductosController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        return redirect('/productos');
+
+        //Validar
+        $request->validate([
+            'nombre' => 'required',
+            'precio' => 'required',
+            'enlace' => 'url',
+        ]);
+
+        //Guardar
+        /* $producto = new Producto();
+        $producto->nombre = $request->nombre;
+        $producto->precio = $request->precio;
+        $producto->descripcion = $request->descripcion ?? '';
+        $producto->enlace = $request->enlace ?? '';
+        $producto->save(); */
+
+         $request->merge([
+            'descripcion' => $request->descripcion ?? '',
+            'enlace' => $request->enlace ?? '',
+        ]);
+
+        Producto::create($request->all());
+
+        return redirect('/producto');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Producto  $producto
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Producto $producto)
     {
-        $producto = Producto::find($id);
         return view('productos/productoShow', compact('producto'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Producto  $producto
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Producto $producto)
     {
-        //
+        return view('productos/productosForm', compact('producto'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Producto  $producto
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Producto $producto)
     {
-        //
+
+        $request->validate([
+            'nombre' => 'required',
+            'precio' => 'required',
+            'enlace' => 'url',
+        ]);
+
+        $request->merge([
+            'descripcion' => $request->descripcion ?? '',
+            'enlace' => $request->enlace ?? '',
+        ]);
+
+        Producto::where('id', $producto->id)->update($request->except('_token', '_method'));
+
+        return redirect()->route('producto.show', [$producto]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Producto  $producto
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Producto $producto)
     {
-        //
+        $producto->delete();
+        return redirect()->route('producto.index');
     }
 }
